@@ -9,7 +9,7 @@
 
 module Phylogenies
 
-using LightGraphs
+using LightGraphs, Compat
 
 export
     # Types
@@ -53,6 +53,7 @@ export
     n_possible_rooted,
     n_possible_unrooted
 
+include("indexing.jl")
 include("phylogeny.jl")
 include("node_basics.jl")
 include("branch_basics.jl")

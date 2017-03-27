@@ -1,11 +1,10 @@
-module TestPhylo
+module TestPhylogenies
 
 using Base.Test
 
 using Phylogenies
-using LightGraphs
 using Phylogenies.Dating
-using Bio.Seq
+using LightGraphs
 
 @testset "Phylogenies" begin
 
@@ -78,10 +77,10 @@ using Bio.Seq
                 @test haschild(tree, 4, i) == hasc2
                 @test isredundant(tree, i) == false
                 if i < 4
-                    @test Phylo.parent(tree, i) == 4
+                    @test Phylogenies.parent(tree, i) == 4
                     @test children(tree, i) == Int[]
                 else
-                    @test_throws ErrorException Phylo.parent(tree, i)
+                    @test_throws ErrorException Phylogenies.parent(tree, i)
                 end
             end
             for i in names
@@ -123,14 +122,14 @@ using Bio.Seq
             @test child_branches(tree, 4) == [Edge(4, 1), Edge(4, 2), Edge(4, 3)]
             @test child_branches(destroy_branch!(tree, Edge(4, 1)), 4) == [Edge(4, 2), Edge(4, 3)]
             @test child_branches(create_branch!(tree, Edge(4, 1),
-                    Phylo.BasicBranch(Nullable(0.237), Nullable{Float64}())), 4) == [Edge(4, 1), Edge(4, 2), Edge(4, 3)]
+                    Phylogenies.BasicBranch(Nullable(0.237), Nullable{Float64}())), 4) == [Edge(4, 1), Edge(4, 2), Edge(4, 3)]
         end
 
         @testset "Manipulation" begin
-            @test Phylo.unconnected_clades(tree) == [5]
-            @test Phylo.subtree_roots(tree) == [4]
-            @test child_branches(Phylo.delete!(tree, 1), 4) == [Edge(4, 2), Edge(4, 3)]
-            @test child_branches(Phylo.disconnect_root!(tree), 4) == []
+            @test Phylogenies.unconnected_clades(tree) == [5]
+            @test Phylogenies.subtree_roots(tree) == [4]
+            @test child_branches(Phylogenies.delete!(tree, 1), 4) == [Edge(4, 2), Edge(4, 3)]
+            @test child_branches(Phylogenies.disconnect_root!(tree), 4) == []
         end
 
     end

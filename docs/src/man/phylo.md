@@ -1,9 +1,9 @@
 # Bio.Phylo: Phylogenetic trees and networks
 
 ```@meta
-CurrentModule = Bio.Phylo
+CurrentModule = Phylogenies
 DocTestSetup = quote
-    using Bio.Phylo
+    using Phylogenies
 end
 ```
 
@@ -59,12 +59,12 @@ root(tree)
 
 ## Divergence time estimation
 
-`Phylo` has a submodule called `Dating` which contains methods for divergence
+`Phylogenies` has a submodule called `Dating` which contains methods for divergence
 time estimation between sequences.
 
 ### Dating methods
 
-Currently `Phylo.Dating` has two types which are used as function arguments to
+Currently `Phylogenies.Dating` has two types which are used as function arguments to
 dictate how to compute coalescence times. They all inherit from the abstract
 data type `DatingMethod`.
 

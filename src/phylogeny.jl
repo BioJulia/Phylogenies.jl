@@ -7,14 +7,8 @@
 #
 # This file is a part of BioJulia. License is MIT: https://github.com/BioJulia/Bio.jl/blob/master/LICENSE.md
 
-# The Phylogeny Abstract Type
-# ---------------------------
 
-@compat abstract type Phylogeny end
-
-@compat abstract type AnnotatedPhylogeny{T<:Phylogeny} end
-
-# The PhylogeneticTree Type
+# The Phylogeny Type
 # -------------------------
 
 # The internal structure and representation of the Phylogeny type uses a DiGraph.

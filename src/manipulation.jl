@@ -63,7 +63,7 @@ end
 Delete a node from a phylogenetic tree.
 """
 function Base.delete!(tree::Phylogeny, vertex::Int, preserve_bl::Bool = false)
-    p = Phylo.parent(tree, vertex)
+    p = Phylogenies.parent(tree, vertex)
     # Delete the connection to parent but remember the branchlength of the
     # deleted branch.
     parentedge = Edge(p, vertex)

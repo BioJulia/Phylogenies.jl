@@ -1,9 +1,8 @@
-# phylo/branch_basics.jl
+# branch_basics.jl
 # ======================
 #
 # Types and methods for manipulating the branches of phylogenies and networks.
 #
-# Part of the Bio.Phylo module.
 #
 # This file is a part of BioJulia. License is MIT: https://github.com/BioJulia/Bio.jl/blob/master/LICENSE.md
 
