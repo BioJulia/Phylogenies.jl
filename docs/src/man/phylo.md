@@ -21,7 +21,7 @@ Phylogeny
 You can create a very simple unresolved phylogeny (a star phylogeny) by
 providing the tips as a vector of strings or a vector of symbols.
 
-```@example phylo
+```@example t
 tips = [:A, :B, :C]
 tree = Phylogeny(tips)
 ```
@@ -43,15 +43,15 @@ isrerootable
 root
 ```
 
-```@example phylo
+```@example t
 isrooted(tree)
 ```
 
-```@example phylo
+```@example t
 isrerootable(tree)
 ```
 
-```@example phylo
+```@example t
 root(tree)
 ```
 
