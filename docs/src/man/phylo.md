@@ -1,4 +1,4 @@
-# Bio.Phylo: Phylogenetic trees and networks
+# Phylogenies: Phylogenetic trees and networks
 
 ```@meta
 CurrentModule = Phylogenies
@@ -7,7 +7,7 @@ DocTestSetup = quote
 end
 ```
 
-The `Bio.Phylo` module is for data types and methods for handling phylogenetic
+The `Phylogenies` module is for data types and methods for handling phylogenetic
 trees and networks.
 
 ## Phylogenies
@@ -22,13 +22,11 @@ You can create a very simple unresolved phylogeny (a star phylogeny) by
 providing the tips as a vector of strings or a vector of symbols.
 
 ```@example phylo
-using Bio.Phylo # hide
 tips = [:A, :B, :C]
 tree = Phylogeny(tips)
 ```
 
 ```@example
-using Bio.Phylo # hide
 tips = ["A", "B", "C"]
 tree = Phylogeny(tips)
 ```

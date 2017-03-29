@@ -37,5 +37,6 @@ markdown_extensions:
 
 # Page tree
 pages:
-- Phylogenetic Trees: man/phylo.md
-- Contributing: man/contributing.md
+    - Introduction: index.md
+    - Phylogenetic Trees: man/phylo.md
+    - Contributing: man/contributing.md
