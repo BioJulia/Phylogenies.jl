@@ -121,7 +121,7 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#biophylo-phylogenetic-trees-and-networks">Bio.Phylo: Phylogenetic trees and networks</a></li>
+        <li class="first-level active"><a href="#phylogenies-phylogenetic-trees-and-networks">Phylogenies: Phylogenetic trees and networks</a></li>
         
             <li class="second-level"><a href="#phylogenies">Phylogenies</a></li>
             
@@ -140,9 +140,9 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<p><a id='Bio.Phylo:-Phylogenetic-trees-and-networks-1'></a></p>
-<h1 id="biophylo-phylogenetic-trees-and-networks">Bio.Phylo: Phylogenetic trees and networks</h1>
-<p>The <code>Bio.Phylo</code> module is for data types and methods for handling phylogenetic trees and networks.</p>
+<p><a id='Phylogenies:-Phylogenetic-trees-and-networks-1'></a></p>
+<h1 id="phylogenies-phylogenetic-trees-and-networks">Phylogenies: Phylogenetic trees and networks</h1>
+<p>The <code>Phylogenies</code> module is for data types and methods for handling phylogenetic trees and networks.</p>
 <p><a id='Phylogenies-1'></a></p>
 <h2 id="phylogenies">Phylogenies</h2>
 <p><a id='Phylogenies.Phylogeny' href='#Phylogenies.Phylogeny'>#</a>
@@ -151,16 +151,14 @@
 <p>The type is parametric with two parameters <code>C</code> and <code>B</code>.</p>
 <p>This is because it is common to want to annotate tips, clades, and branches in a phylogeny with data to create a richer model of evolution of do other things like dictate aesthetic values when plotting.</p>
 <p>Type parameter <code>C</code> dictates what datatype can be stored in the phylogeny to annotate clades and tips. Type parameter <code>B</code> dictates what datatype can be stored in the phylogeny to annotate branches. Think <code>C</code> for clades and <code>B</code> for branches.</p>
-<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/75c227d5101799181e1176a67f5d06947ba88b28/src/phylogeny.jl#L22-L34' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/7e328d32e2e57ff252b26996b49fc7e14b94b91e/src/phylogeny.jl#L22-L34' class='documenter-source'>source</a><br></p>
 <p><a id='Constructors-1'></a></p>
 <h3 id="constructors">Constructors</h3>
 <p>You can create a very simple unresolved phylogeny (a star phylogeny) by providing the tips as a vector of strings or a vector of symbols.</p>
 <p>```@example phylo
-using Bio.Phylo # hide
 tips = [:A, :B, :C]
 tree = Phylogeny(tips)</p>
 <div class="codehilite"><pre><span></span>```@example
-using Bio.Phylo # hide
 tips = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]
 tree = Phylogeny(tips)
 </pre></div>
@@ -181,7 +179,7 @@ tree = Phylogeny(tips)
 </pre></div>
 
 
-<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/75c227d5101799181e1176a67f5d06947ba88b28/src/phylogeny.jl#L158-L167' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/7e328d32e2e57ff252b26996b49fc7e14b94b91e/src/phylogeny.jl#L158-L167' class='documenter-source'>source</a><br></p>
 <p><a id='Phylogenies.isrerootable' href='#Phylogenies.isrerootable'>#</a>
 <strong><code>Phylogenies.isrerootable</code></strong> &mdash; <em>Function</em>.</p>
 <div class="codehilite"><pre><span></span>isrerootable(x::Phylogeny)
@@ -194,11 +192,11 @@ tree = Phylogeny(tips)
 </pre></div>
 
 
-<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/75c227d5101799181e1176a67f5d06947ba88b28/src/phylogeny.jl#L172-L181' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/7e328d32e2e57ff252b26996b49fc7e14b94b91e/src/phylogeny.jl#L172-L181' class='documenter-source'>source</a><br></p>
 <p><a id='Phylogenies.root' href='#Phylogenies.root'>#</a>
 <strong><code>Phylogenies.root</code></strong> &mdash; <em>Function</em>.</p>
 <p>Get the vertex of the tree which represents the root of the tree.</p>
-<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/75c227d5101799181e1176a67f5d06947ba88b28/src/phylogeny.jl#L186' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/7e328d32e2e57ff252b26996b49fc7e14b94b91e/src/phylogeny.jl#L186' class='documenter-source'>source</a><br></p>
 <p>```@example phylo
 isrooted(tree)</p>
 <div class="codehilite"><pre><span></span>```@example phylo
@@ -219,7 +217,7 @@ root(tree)</code></p>
 <p>A very simple expected divergence time estimate. Assumes a strict molecult clock and that the divergence time is equal to</p>
 <p>$ t = d / (2\mu) $</p>
 <p>Where $d$ is the evolutionary distance computed for two aligned sequences, and $\mu$ is the substitution rate.</p>
-<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/75c227d5101799181e1176a67f5d06947ba88b28/src/dating.jl#L34-L42' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/7e328d32e2e57ff252b26996b49fc7e14b94b91e/src/dating.jl#L34-L42' class='documenter-source'>source</a><br></p>
 <p><a id='Phylogenies.Dating.SpeedDating' href='#Phylogenies.Dating.SpeedDating'>#</a>
 <strong><code>Phylogenies.Dating.SpeedDating</code></strong> &mdash; <em>Type</em>.</p>
 <p><code>SpeedDate</code> is the name given to a method of estimating a divergence time between two DNA sequence regions that was first implemented in the R package HybridCheck in order to date regions of introgression in large sequence contigs.</p>
@@ -229,7 +227,7 @@ root(tree)</code></p>
 <p>Using these assumptions, the SpeedDate method finds the root of the following formula for $Pr(X \le k) = 0.05$, $0.5$, and $0.95$, and then divides the three answers by twice the assumed substitution rate.</p>
 <p>$ f(n, k, 2\mu t, Pr(X \le k) = \left( \sum_{i=0}^{\lfloor k \rfloor} \binom{n}{i} {2\mu t}^i (1 - 2\mu t)^{n-i}   \right) - Pr(X \le k) $</p>
 <p>This results in an upper, middle, and lower estimate of the coalescence time $t$ of the two sequences (expressed as the number of generations).</p>
-<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/75c227d5101799181e1176a67f5d06947ba88b28/src/dating.jl#L84-L116' class='documenter-source'>source</a><br></p></div>
+<p><a target='_blank' href='https://github.com/BioJulia/Phylogenies.jl/tree/7e328d32e2e57ff252b26996b49fc7e14b94b91e/src/dating.jl#L84-L116' class='documenter-source'>source</a><br></p></div>
         
     </div>
 
