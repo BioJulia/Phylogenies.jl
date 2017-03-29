@@ -3,6 +3,14 @@
 
     
     <url>
+     <loc>https://biojulia.github.io/Phylogenies.jl//</loc>
+     <lastmod>2017-03-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>https://biojulia.github.io/Phylogenies.jl//man/phylo/</loc>
      <lastmod>2017-03-29</lastmod>
      <changefreq>daily</changefreq>
