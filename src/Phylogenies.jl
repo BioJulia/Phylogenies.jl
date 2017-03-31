@@ -9,7 +9,7 @@
 
 module Phylogenies
 
-using LightGraphs, Compat
+using LightGraphs
 
 export
     # Types
