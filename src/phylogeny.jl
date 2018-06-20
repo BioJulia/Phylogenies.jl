@@ -55,7 +55,7 @@ The phylogeny will store annotation data of type `C` for tree nodes
 
 # Examples
 ```julia
-Phylogeny(Void, Void, [:Human, :Chimp, :Dog, :Cat])
+Phylogeny(Nothing, Nothing, [:Human, :Chimp, :Dog, :Cat])
 Phylogeny(Float64, Float64, [:Human, :Chimp, :Dog, :Cat])
 ```
 """
